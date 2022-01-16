@@ -3,18 +3,16 @@ using UnityEngine;
 
 namespace PiratesShip.Score
 {
-    [CustomEditor(typeof(ScoreController))]
-    public class ScoreControllerEditor : Editor
+    [CustomEditor(typeof(ScriptableNumber))]
+    public class ScriptableNumberEditor : Editor
     {
-        private SerializedProperty scoreProperty;
-
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
 
-            ScoreController scoreController = target as ScoreController;
+            ScriptableNumber scoreController = target as ScriptableNumber;
 
-            EditorGUILayout.LabelField($"{nameof(scoreProperty.name)} = {scoreController.SavedScore}");
+            EditorGUILayout.LabelField($"{nameof(scoreController.SavedValue)} = {scoreController.SavedValue}");
 
             EditorGUILayout.BeginVertical("box");
             
@@ -26,7 +24,7 @@ namespace PiratesShip.Score
             EditorGUILayout.EndHorizontal();
             
             if (GUILayout.Button("Reset Score"))
-                scoreController.ResetScore();
+                scoreController.Reset();
 
 
             EditorGUILayout.EndVertical();

@@ -23,7 +23,6 @@ namespace PiratesShip
         protected override GameObject CreateObject()
         {
             Vector3 randomOffset = new Vector3(RandomRange*RandomSignal, RandomRange*RandomSignal, 0f);
-            Debug.Log(randomOffset);
             return Instantiate(spawnData.ObjectToSpawn, pivot.position + randomOffset, pivot.rotation);
         }
     }

@@ -308,6 +308,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1581000728196236521, guid: 25efd2a102ff00845891073e51dafd8a, type: 3}
   m_PrefabInstance: {fileID: 8205471176920983984}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3785581979941622866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572807646659224060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7240f2faae097d468c8e29f68e9313e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreController: {fileID: 11400000, guid: 312b622073034d34b95e527bcf9f842c, type: 2}
+  amount: 1
 --- !u!114 &4216214103170784270
 MonoBehaviour:
   m_ObjectHideFlags: 0
