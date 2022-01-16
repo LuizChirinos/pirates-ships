@@ -16,10 +16,5 @@ namespace PiratesShip
         public GameObject ObjectToSpawn { get => objectToSpawn; }
         public int MaxSpawnedObjects { get => maxSpawnedObjects; }
         public bool HasSpawnLimit { get => hasSpawnLimit; }
-
-        public bool ReachedMaxNumberOfSpawned(int numberOfSpawned)
-        {
-            return numberOfSpawned >= maxSpawnedObjects;
-        }
     }
 }
