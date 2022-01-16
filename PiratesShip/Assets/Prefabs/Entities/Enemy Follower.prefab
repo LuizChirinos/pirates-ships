@@ -170,6 +170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets: {fileID: 11400000, guid: 7d517043f7ca9b84d972888af62ee869, type: 2}
+--- !u!114 &3778941149845849260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572807646659224060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6b3eb34fcf2d146936b36f2874fae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8397907519990534343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,15 +195,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementData: {fileID: 11400000, guid: 84f08c050f618364f88662d3196df8e4, type: 2}
---- !u!114 &3778941149845849260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572807646659224060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6b3eb34fcf2d146936b36f2874fae9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

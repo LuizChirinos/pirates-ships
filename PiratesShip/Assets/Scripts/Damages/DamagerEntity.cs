@@ -1,7 +1,7 @@
 using UnityEngine;
 using PiratesShip.Tags;
 
-namespace PiratesShip.Life
+namespace PiratesShip.Damages
 {
     public class DamagerEntity : MonoBehaviour
     {

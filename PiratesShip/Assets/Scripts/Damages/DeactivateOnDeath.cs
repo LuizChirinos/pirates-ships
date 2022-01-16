@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace PiratesShip.Life
+namespace PiratesShip.Damages
 {
     [RequireComponent(typeof(Health))]
     public class DeactivateOnDeath : MonoBehaviour

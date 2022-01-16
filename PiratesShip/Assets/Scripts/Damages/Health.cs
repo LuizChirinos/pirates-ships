@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace PiratesShip.Life
+namespace PiratesShip.Damages
 {
     public class Health : MonoBehaviour
     {

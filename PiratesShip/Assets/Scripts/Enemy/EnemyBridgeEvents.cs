@@ -1,4 +1,4 @@
-using PiratesShip.Life;
+using PiratesShip.Damages;
 using PiratesShip.Movements;
 using System.Collections;
 using System.Collections.Generic;
