@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace PiratesShip.Damages
         public delegate void OnLifeEvent();
         public delegate void OnLifeChanged(float lifeValue);
 
+        public static event Action<Health> OnAnyDeath;
         public OnLifeEvent OnDeath;
         public OnLifeEvent OnHit;
 
@@ -57,6 +59,7 @@ namespace PiratesShip.Damages
             if (IsDead)
             {
                 StartCoroutine(DieCoroutine());
+                OnAnyDeath?.Invoke(this);
                 OnDeath?.Invoke();
             }
 

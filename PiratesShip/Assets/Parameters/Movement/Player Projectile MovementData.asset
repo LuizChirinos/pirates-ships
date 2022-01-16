@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 865146578179efc43b309eb7506f4b6b, type: 3}
-  m_Name: Projectile MovementData
+  m_Name: Player Projectile MovementData
   m_EditorClassIdentifier: 
   speed: 7
   rotationSpeed: 7

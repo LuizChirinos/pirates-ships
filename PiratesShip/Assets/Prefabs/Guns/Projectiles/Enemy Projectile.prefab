@@ -93,6 +93,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 2394468983531986965, guid: 583dcdf41b3465c42ade52f7f3eea085, type: 3}
+      propertyPath: tagData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4fa3c9c5ade4ea94881a86d78a8528a1, type: 2}
     - target: {fileID: 7813130204783059253, guid: 583dcdf41b3465c42ade52f7f3eea085, type: 3}
       propertyPath: m_RootOrder
       value: 0

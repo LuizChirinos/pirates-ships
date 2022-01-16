@@ -15,9 +15,9 @@ namespace PiratesShip.Damages
         {
             if (!other.TryGetComponent(out Health health))
                 return;
-            if (!other.TryGetComponent(out EntityTag entityTag))
+            if (!other.TryGetComponent(out TagContainer tagContainer))
                 return;
-            if (entityTag.TagData != targetTagData)
+            if (tagContainer.TagData != targetTagData)
                 return;
 
             health.Damage(damageAmount);

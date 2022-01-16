@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PiratesShip.Tags
 {
-    public class EntityTag : MonoBehaviour
+    public class TagContainer : MonoBehaviour
     {
         [SerializeField] private TagData tagData;
 
