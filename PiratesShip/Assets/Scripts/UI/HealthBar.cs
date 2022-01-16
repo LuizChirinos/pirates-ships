@@ -17,9 +17,6 @@ namespace PiratesShip.Damages
         {
             health = GetComponentInParent<Health>();
             sliderBar = GetComponentInChildren<Slider>();
-        }
-        private void OnEnable()
-        {
             sliderBar.maxValue = health.MaxLife;
             health.OnLifeSet += UpdateBar;
             health.OnDeath += Deactivate;

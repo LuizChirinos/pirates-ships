@@ -447,7 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityGuns:
   - gun: {fileID: 7885829602744409407}
-    gunKey: 8
+    gunKey: 32
   - gun: {fileID: 435140410574853297}
     gunKey: 113
   - gun: {fileID: 435423843064438296}
