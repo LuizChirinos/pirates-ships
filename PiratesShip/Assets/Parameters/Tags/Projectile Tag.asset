@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865146578179efc43b309eb7506f4b6b, type: 3}
-  m_Name: Player MovementData
+  m_Script: {fileID: 11500000, guid: 07feabbb4dd1ca24baca719f6978b6a9, type: 3}
+  m_Name: Projectile Tag
   m_EditorClassIdentifier: 
-  speed: 1.7
-  rotationSpeed: 10

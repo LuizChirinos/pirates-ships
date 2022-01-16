@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace PiratesShip.Life
@@ -19,13 +20,15 @@ namespace PiratesShip.Life
         [SerializeField] private float maxLife = 3;
         [SerializeField] private float currentLife = 0;
         [SerializeField] private bool isInvincible = false;
+        [Space(10)]
+        [SerializeField] private float dieLifetime = 1f;
         #endregion
 
         #region Properties
         public float MaxLife { get => maxLife; }
         public float CurrentLife { get => currentLife; }
         public bool IsDead { get => currentLife <= 0; }
-        public bool IsInvincible { get => IsInvincible; }
+        public bool IsInvincible { get => isInvincible; }
         #endregion
 
         private void OnEnable()
@@ -38,7 +41,7 @@ namespace PiratesShip.Life
         {
             if (IsDead)
                 return false;
-            if(IsInvincible)
+            if (IsInvincible)
                 return false;
             if (damageAmount <= 0)
                 return false;
@@ -52,9 +55,25 @@ namespace PiratesShip.Life
             OnDamageTaken?.Invoke(damageTaken);
 
             if (IsDead)
+            {
+                StartCoroutine(DieCoroutine());
                 OnDeath?.Invoke();
+            }
 
             return true;
+        }
+
+        private IEnumerator DieCoroutine()
+        {
+            float elapsedTime = 0;
+
+            while (elapsedTime < dieLifetime)
+            {
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            gameObject.SetActive(false);
         }
     }
 }

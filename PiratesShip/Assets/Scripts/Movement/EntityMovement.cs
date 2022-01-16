@@ -6,11 +6,17 @@ namespace PiratesShip.Movements
     [RequireComponent(typeof(Rigidbody2D))]
     public class EntityMovement : MonoBehaviour
     {
+        #region Fields
         [SerializeField] private MovementData movementData;
-        private BaseInput baseInput;
-        private Rigidbody2D rb;
+        protected BaseInput baseInput;
+        protected Rigidbody2D rb;
+        protected int movementLock = 0;
+        #endregion
 
+        #region Properties
         public virtual Vector2 CurrentSpeed { get; private set; }
+        public virtual bool CanMove { get => movementLock <= 0; }
+        #endregion
 
         #region Monobehaviour callbacks
         protected virtual void Start()
@@ -20,6 +26,12 @@ namespace PiratesShip.Movements
         }
         protected virtual void Update()
         {
+            if (!CanMove)
+            {
+                StopMove();
+                return;
+            }
+
             Move();
         }
         #endregion
@@ -36,6 +48,26 @@ namespace PiratesShip.Movements
 
             return CurrentSpeed;
         }
+        protected virtual void StopMove()
+        {
+            CurrentSpeed = Vector2.zero;
+            rb.velocity = CurrentSpeed;
+        }
+
+        #region Public methods
+        public void LockMovement()
+        {
+            movementLock++;
+        }
+        public void UnlockMovement()
+        {
+            movementLock--;
+        }
+        public void UnlockAllMovement()
+        {
+            movementLock = 0;
+        }
+        #endregion
     }
 
 }
